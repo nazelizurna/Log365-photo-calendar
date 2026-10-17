@@ -781,7 +781,7 @@ function loadDoc(d,imgs,label){
 
 /* ---- persistence (per-viewer convenience only) ---- */
 function schedSave(){clearTimeout(saveT);saveT=setTimeout(()=>{
-  if(!lsSet('log365:current',JSON.stringify({doc,images:usedImages(doc,IMGS)})))setStatusNote('Not saved in this browser (storage is full or blocked).');
+  if(!lsSet('log365:current',JSON.stringify({v:2,doc,images:usedImages(doc,IMGS)})))setStatusNote('Not saved in this browser (storage is full or blocked).');
 },500);}
 let statusNote='';
 function setStatusNote(t){statusNote=t;updateStatus();}
@@ -1526,7 +1526,7 @@ function boot(){
   const th=lsGet('log365:theme');theme=th==='night'||th==='dark'?'night':th==='day'||th==='light'?'day':null;paintTheme();
   try{const mq=window.matchMedia('(prefers-color-scheme: dark)');(mq.addEventListener?mq.addEventListener.bind(mq,'change'):function(){})(()=>{if(!theme)paintTheme();});}catch(e){}
   let start=null;
-  try{const raw=lsGet('log365:current');if(raw){const o=JSON.parse(raw);const r=sanitizeDoc(o.doc,o.images);if(r.doc.cards.length||o.doc&&o.doc.cards&&!o.doc.cards.length){start=r;}}}catch(e){start=null;}
+  try{const raw=lsGet('log365:current');if(raw){const o=JSON.parse(raw);if(o.v!==2)throw new Error('old save');const r=sanitizeDoc(o.doc,o.images);if(r.doc.cards.length||o.doc&&o.doc.cards&&!o.doc.cards.length){start=r;}}}catch(e){start=null;}
   if(start){doc=start.doc;Object.assign(IMGS,start.imgs);}
   else doc=buildTemplate(TEMPLATES[0]);
   if(doc.cal)tab='calendar';
