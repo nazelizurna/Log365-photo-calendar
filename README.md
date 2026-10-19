@@ -13,6 +13,8 @@
   One HTML file · no build step · no dependencies · nothing leaves your device
 </p>
 
+![Log365 Photo Calendar](https://img.shields.io/badge/React-18.3-blue) ![TypeScript](https://img.shields.io/badge/TypeScript-5.5-blue) ![Vite](https://img.shields.io/badge/Vite-5.4-purple) ![TailwindCSS](https://img.shields.io/badge/TailwindCSS-3.4-cyan) ![License](https://img.shields.io/badge/License-MIT-green)
+
 ---
 
 ## What it does
