@@ -604,50 +604,6 @@ const TEMPLATES=[
  {id:'cal-stamp',name:'Stamp calendar',desc:'Scalloped stamp photo and round photo days',cal:true,variant:'stamp'},
  {id:'cal-recap',name:'Recap grid calendar',desc:'Photo grid over a full-bleed picture',cal:true,variant:'recap'},
  {id:'cal-scrap',name:'Scrapbook calendar',desc:'Paper page with framed and round photos',cal:true,variant:'scrap'},
- {id:'portfolio',name:'Portfolio',desc:'Intro, stats, work and contact',cols:6,rows:4,rw:3,rh:2,palette:'log365',font:'bricolage',cards:[
-  [0,0,3,2,{ci:2,fill:'gradient',icon:'sparkle',title:"Hi, I'm Mara Okafor",body:'Product designer making calm tools for busy teams.',size:1.15}],
-  [3,0,2,1,{ci:0,icon:'briefcase',title:'Selected work',link:'mara.design/work',linkLabel:'View projects'}],
-  [5,0,1,2,{ci:1,stat:'12',title:'years shipping'}],
-  [3,1,2,1,{ci:4,icon:'pen',title:'Currently',body:'Design lead at Northwind. Advising two seed-stage teams.'}],
-  [0,2,2,2,{ci:3,icon:'layers',title:'Checkout rebuild',body:'Cut abandoned carts by a quarter for a 40-person retail team.'}],
-  [2,2,2,1,{ci:0,stat:'4.9',title:'client rating'}],
-  [2,3,2,1,{ci:5,icon:'mail',title:'Say hello',link:'hello@mara.design',linkLabel:'hello@mara.design'}],
-  [4,2,2,2,{ci:1,fill:'gradient',icon:'globe',title:'Lagos, working anywhere',body:'UTC+1. Happy to overlap with most time zones.'}]]},
- {id:'links',name:'Link in bio',desc:'Tall 9:16 profile with links',cols:4,rows:7,rw:9,rh:16,palette:'sorbet',font:'bricolage',cards:[
-  [0,0,4,2,{ci:1,fill:'gradient',icon:'sparkle',title:'@mara.codes',body:'Design engineer. Notes on interface craft, every other Friday.',size:1.1}],
-  [0,2,4,1,{ci:0,va:'center',icon:'mail',title:'The Friday letter',link:'mara.codes/letters',linkLabel:'Subscribe'}],
-  [0,3,2,1,{ci:2,icon:'globe',title:'Portfolio',link:'mara.codes',linkLabel:'Open'}],
-  [2,3,2,1,{ci:3,icon:'play',title:'Talks',link:'mara.codes/talks',linkLabel:'Watch'}],
-  [0,4,2,2,{ci:4,fill:'gradient',icon:'chart',stat:'18k',title:'newsletter readers'}],
-  [2,4,2,1,{ci:0,icon:'bolt',title:'Shop',link:'mara.codes/shop',linkLabel:'Browse'}],
-  [2,5,2,1,{ci:0,icon:'mail',title:'Contact',link:'hello@mara.codes',linkLabel:'Email me'}],
-  [0,6,4,1,{ci:5,va:'center',ha:'center',title:'Updated October 2026'}]]},
- {id:'launch',name:'Product launch',desc:'Hero, proof points and a call to action',cols:6,rows:4,rw:16,rh:9,palette:'night',font:'bricolage',cards:[
-  [0,0,4,2,{ci:1,fill:'gradient',title:'Meridian 2.0',body:'Planning for teams that ship every week. Now with live roadmaps.',size:1.25}],
-  [4,0,2,1,{ci:0,stat:'38%',title:'faster standups'}],
-  [4,1,2,1,{ci:5,icon:'play',title:'Start free',link:'meridian.app/trial',linkLabel:'14-day trial'}],
-  [0,2,2,2,{ci:4,icon:'bolt',title:'Instant sync',body:'Edits land on every screen in under 200 ms.'}],
-  [2,2,2,2,{ci:2,fill:'gradient',icon:'shield',title:'Private by default',body:'Encrypted end to end, with audit logs.'}],
-  [4,2,2,1,{ci:3,fill:'gradient',stat:'4.8',title:'average review'}],
-  [4,3,2,1,{ci:0,icon:'heart',title:'9,000 teams on board'}]]},
- {id:'metrics',name:'Metrics board',desc:'KPI tiles with notes',cols:6,rows:4,rw:16,rh:9,palette:'log365',font:'instrument',cards:[
-  [0,0,2,2,{ci:2,fill:'gradient',icon:'chart',stat:'$84.2k',title:'Monthly revenue'}],
-  [2,0,1,1,{ci:0,stat:'1,204',title:'signups'}],
-  [3,0,1,1,{ci:1,stat:'3.1%',title:'churn'}],
-  [4,0,2,1,{ci:4,icon:'star',stat:'92',title:'NPS'}],
-  [2,1,2,1,{ci:3,icon:'sparkle',title:'Week 41',body:'Best week since June.'}],
-  [4,1,2,1,{ci:0,icon:'chart',title:'Weekly report',link:'meridian.app/report',linkLabel:'Open'}],
-  [0,2,3,2,{ci:5,title:'Notes',body:'Signups up 12% after the pricing page rewrite.\nChurn flat. Revisit the annual plan discount next sprint.'}],
-  [3,2,3,2,{ci:1,fill:'gradient',icon:'layers',title:'Growth',body:'Referral program launches in November.'}]]},
- {id:'photos',name:'Photo grid',desc:'Gradients to swap for your photos',cols:6,rows:4,rw:3,rh:2,palette:'tide',font:'fraunces',cards:[
-  [0,0,2,3,{ci:3,fill:'gradient',title:'Lisbon, 6am'}],
-  [2,0,2,2,{ci:4,fill:'gradient',title:'Ferry'}],
-  [4,0,2,2,{ci:0,fill:'gradient',title:'Rooftops'}],
-  [0,3,2,1,{ci:1,va:'center',body:'Upload a photo in the Card tab to replace any gradient.'}],
-  [2,2,1,2,{ci:5,fill:'gradient',title:'Tiles'}],
-  [3,2,1,2,{ci:1,fill:'gradient',title:'Window'}],
-  [4,2,2,2,{ci:3,fill:'gradient',title:'Dusk'}]]},
- {id:'blank',name:'Blank board',desc:'An empty 6 × 4 grid',cols:6,rows:4,rw:3,rh:2,palette:'log365',font:'bricolage',cards:[]}
 ];
 function buildTemplate(t){
   if(t.cal){const n=new Date();return calDoc(n.getFullYear(),n.getMonth(),{variant:t.variant});}
